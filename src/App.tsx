@@ -1,4 +1,6 @@
 import React, { useState, useEffect, CSSProperties } from 'react';
+import './index.css';
+
 
 const ValentinePage = () => {
   const [noCount, setNoCount] = useState(0);
