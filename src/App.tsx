@@ -8,12 +8,12 @@ const ValentinePage = () => {
   const [buttonStyle, setButtonStyle] = useState<CSSProperties>({});
   
   const messages = [
-    "Will you be my valentine?",
-    "Aah i think you havent seen the option correctly. Try again.",
-    "ohoo wrong answer, you really cant see the next option?",
+    "Will you be my valentine ?",
+    "Aah, I think you havent seen all the options. Try again.",
+    "I'll get you burger and fries, what say?",
     "Think again, I am cute",
-    "woww you are really determined to tell no uh!",
-    "Well, you are out of options now."
+    "Wow you are really determined to tell no uh!",
+    "Well, lets see what you do."
   ];
 
   const getRandomPosition = (): CSSProperties => {
@@ -27,8 +27,8 @@ const ValentinePage = () => {
       position: 'fixed' as const,
       left: `${x}px`,
       top: `${y}px`,
-      transform: `scale(${Math.max(0.7, 1 - noCount * 0.1)})`,
-      opacity: Math.max(0.5, 1 - noCount * 0.1),
+      transform: `scale(${Math.max(0.5, 1 - noCount * 0.2)})`,
+      opacity: Math.max(0.1, 1 - noCount * 0.3),
       transition: 'all 0.3s ease',
       zIndex: 50
     };
@@ -79,6 +79,8 @@ const ValentinePage = () => {
               >
                 Yes
               </button>
+
+              
               
               {noCount < 5 && (
                 <button
