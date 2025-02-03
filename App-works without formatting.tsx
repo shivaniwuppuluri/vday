@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const ValentinePage = () => {
   const [noCount, setNoCount] = useState(0);
@@ -33,43 +33,6 @@ const ValentinePage = () => {
     setShowHugging(true);
   };
 
-  const SingleBear = () => (
-    <svg viewBox="0 0 200 200" className="w-48 h-48">
-      <circle cx="100" cy="100" r="50" fill="#CC8E69" />
-      <circle cx="80" cy="90" r="10" fill="#4A2F24" />
-      <circle cx="120" cy="90" r="10" fill="#4A2F24" />
-      <circle cx="100" cy="110" r="8" fill="#4A2F24" />
-      <circle cx="70" cy="60" r="20" fill="#CC8E69" />
-      <circle cx="130" cy="60" r="20" fill="#CC8E69" />
-      <path d="M 80 120 Q 100 140 120 120" stroke="#4A2F24" strokeWidth="4" fill="none" />
-    </svg>
-  );
-
-  const HuggingBears = () => (
-    <svg viewBox="0 0 400 200" className="w-96 h-48">
-      {/* Left Bear */}
-      <g transform="translate(-30, 0)">
-        <circle cx="100" cy="100" r="50" fill="#CC8E69" />
-        <circle cx="80" cy="90" r="10" fill="#4A2F24" />
-        <circle cx="120" cy="90" r="10" fill="#4A2F24" />
-        <circle cx="100" cy="110" r="8" fill="#4A2F24" />
-        <circle cx="70" cy="60" r="20" fill="#CC8E69" />
-        <path d="M 80 120 Q 100 140 120 120" stroke="#4A2F24" strokeWidth="4" fill="none" />
-      </g>
-      {/* Right Bear */}
-      <g transform="translate(130, 0)">
-        <circle cx="100" cy="100" r="50" fill="#CC8E69" />
-        <circle cx="80" cy="90" r="10" fill="#4A2F24" />
-        <circle cx="120" cy="90" r="10" fill="#4A2F24" />
-        <circle cx="100" cy="110" r="8" fill="#4A2F24" />
-        <circle cx="130" cy="60" r="20" fill="#CC8E69" />
-        <path d="M 80 120 Q 100 140 120 120" stroke="#4A2F24" strokeWidth="4" fill="none" />
-      </g>
-      {/* Heart */}
-      <path d="M 200 70 C 220 30 260 30 260 70 C 260 90 230 110 200 130 C 170 110 140 90 140 70 C 140 30 180 30 200 70" fill="#FF6B6B" />
-    </svg>
-  );
-
   return (
     <div className="min-h-screen bg-pink-100 p-4 relative overflow-hidden">
       {!showHugging ? (
@@ -78,7 +41,14 @@ const ValentinePage = () => {
             {messages[Math.min(noCount, messages.length - 1)]}
           </h1>
           
-          <SingleBear />
+          {/* Single Bear */}
+          <div className="w-48 h-48">
+            <img 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='50' fill='%23CC8E69'/%3E%3Ccircle cx='80' cy='90' r='10' fill='%234A2F24'/%3E%3Ccircle cx='120' cy='90' r='10' fill='%234A2F24'/%3E%3Ccircle cx='100' cy='110' r='8' fill='%234A2F24'/%3E%3Ccircle cx='70' cy='60' r='20' fill='%23CC8E69'/%3E%3Ccircle cx='130' cy='60' r='20' fill='%23CC8E69'/%3E%3Cpath d='M 80 120 Q 100 140 120 120' stroke='%234A2F24' stroke-width='4' fill='none'/%3E%3C/svg%3E"
+              alt="Cute bear"
+              className="w-full h-full"
+            />
+          </div>
           
           <div className="mt-8 flex items-center justify-center gap-4">
             <button 
@@ -118,7 +88,14 @@ const ValentinePage = () => {
           <h1 className="text-4xl font-bold text-pink-600 mb-8">
             Yay! Happy Valentine's Day! ❤️
           </h1>
-          <HuggingBears />
+          {/* Hugging Bears */}
+          <div className="w-96 h-48">
+            <img 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cg transform='translate(-30, 0)'%3E%3Ccircle cx='100' cy='100' r='50' fill='%23CC8E69'/%3E%3Ccircle cx='80' cy='90' r='10' fill='%234A2F24'/%3E%3Ccircle cx='120' cy='90' r='10' fill='%234A2F24'/%3E%3Ccircle cx='100' cy='110' r='8' fill='%234A2F24'/%3E%3Ccircle cx='70' cy='60' r='20' fill='%23CC8E69'/%3E%3Cpath d='M 80 120 Q 100 140 120 120' stroke='%234A2F24' stroke-width='4' fill='none'/%3E%3C/g%3E%3Cg transform='translate(130, 0)'%3E%3Ccircle cx='100' cy='100' r='50' fill='%23CC8E69'/%3E%3Ccircle cx='80' cy='90' r='10' fill='%234A2F24'/%3E%3Ccircle cx='120' cy='90' r='10' fill='%234A2F24'/%3E%3Ccircle cx='100' cy='110' r='8' fill='%234A2F24'/%3E%3Ccircle cx='130' cy='60' r='20' fill='%23CC8E69'/%3E%3Cpath d='M 80 120 Q 100 140 120 120' stroke='%234A2F24' stroke-width='4' fill='none'/%3E%3C/g%3E%3Cpath d='M 200 70 C 220 30 260 30 260 70 C 260 90 230 110 200 130 C 170 110 140 90 140 70 C 140 30 180 30 200 70' fill='%23FF6B6B'/%3E%3C/svg%3E"
+              alt="Hugging bears"
+              className="w-full h-full"
+            />
+          </div>
         </div>
       )}
     </div>
