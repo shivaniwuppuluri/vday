@@ -9,11 +9,11 @@ const ValentinePage = () => {
   
   const messages = [
     "Will you be my valentine ?",
-    "Aah, I think you havent seen all the options. Try again.",
-    "I'll get you burger and fries, what say?",
+    "Why would you pick no? :(",
+    "May be you accidentally keep picking no. Try again.",
     "Think again, I am cute",
-    "Wow you are really determined to tell no uh!",
-    "Well, lets see what you do."
+    "I'll get you burger and fries, what say?",
+    "Wow you are really determined to tell no is it!"
   ];
 
   const getRandomPosition = (): CSSProperties => {
@@ -27,8 +27,8 @@ const ValentinePage = () => {
       position: 'fixed' as const,
       left: `${x}px`,
       top: `${y}px`,
-      transform: `scale(${Math.max(0.5, 1 - noCount * 0.2)})`,
-      opacity: Math.max(0.1, 1 - noCount * 0.3),
+      transform: `scale(${Math.max(0.4, 1 - noCount * 0.2)})`,
+      opacity: Math.max(0.3, 1 - noCount * 0.3),
       transition: 'all 0.3s ease',
       zIndex: 50
     };
