@@ -120,8 +120,26 @@ const ValentinePage = () => {
           </>
         )}
       </div>
+
+      {/* Copyright text at bottom-right */}
+      <footer style={{ 
+        position: "fixed", 
+        bottom: "10px", 
+        right: "10px", 
+        fontSize: "14px", 
+        backgroundColor: "rgba(0, 0, 0, 0.1)", 
+        padding: "5px 10px", 
+        borderRadius: "5px" 
+      }}>
+        © {new Date().getFullYear()} Shivani W
+      </footer>
     </div>
+
+
+        
+
   );
+  
 };
 
 export default ValentinePage;
